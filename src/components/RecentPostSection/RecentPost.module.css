@@ -1,0 +1,120 @@
+.recentSection {
+  background: #edf7f9;
+  padding: 20px 0;
+}
+
+.recentSectionMain {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.recentTopSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.recentTopSection > h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.underlineLink {
+  text-decoration: underline;
+  color: var(--secondaryColor);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.recentCardSection {
+  display: flex; /* Use Flexbox for responsiveness */
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 20px; /* Space between items */
+}
+
+.recentCardSection > div {
+  flex: 1 1 calc(50% - 20px); /* Take up 50% of the width with spacing */
+  padding: 20px 30px;
+  background-color: var(--white);
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.recentCardSection > div > h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.recentCardSection > div > .cardDetail > span {
+  font-size: 18px;
+}
+
+.borderRight {
+  border-right: 1px solid black;
+  padding-right: 30px;
+}
+
+.cardDetail {
+  display: flex;
+  gap: 30px;
+  margin: 15px 0;
+}
+
+.recentCardSection > div > p {
+  font-size: 16px;
+  font-weight: 500;
+  word-spacing: .1em;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .recentSectionMain {
+    width: 90vw; /* Increase width for mobile */
+  }
+
+  .recentTopSection > h2 {
+    font-size: 18px; /* Adjust heading size for mobile */
+  }
+
+  .underlineLink {
+    font-size: 14px; /* Adjust link size for mobile */
+  }
+
+  .recentCardSection > div {
+    flex: 1 1 100%; /* Take full width on mobile */
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+
+  .recentCardSection > div > h2 {
+    font-size: 22px; /* Reduce heading size for mobile */
+  }
+
+  .recentCardSection > div > .cardDetail > span {
+    font-size: 16px; /* Adjust font size for card details */
+  }
+
+  .recentCardSection > div > p {
+    font-size: 14px; /* Adjust paragraph size for mobile */
+  }
+}
+
+/* Desktop Devices */
+@media (min-width: 901px) {
+  .recentSectionMain {
+    width: 75vw; /* Original width */
+  }
+
+  .recentTopSection > h2 {
+    font-size: 22px; /* Original heading size */
+  }
+
+  .underlineLink {
+    font-size: 16px; /* Original link size */
+  }
+
+  .recentCardSection > div {
+    flex: 1 1 calc(50% - 20px); /* Original card width */
+  }
+}

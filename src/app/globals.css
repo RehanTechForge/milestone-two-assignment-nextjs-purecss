@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primaryColor: #fe6464;
+  --secondaryColor: #00a8cc;
+  --dark: #20243d;
+  --light: #8695a4;
+  --white: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,9 +23,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #21243D;
+  background: var(--white);
+  font-family: "Heebo", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

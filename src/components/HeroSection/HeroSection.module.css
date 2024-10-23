@@ -1,0 +1,123 @@
+.heroSection {
+  display: flex; /* Use Flexbox */
+  flex-direction: row; /* Default to row layout */
+  padding: 100px 0;
+  margin: 0 auto;
+  max-width: 75vw;
+  justify-content: center; /* Space between content and image */
+  align-items: center;
+}
+
+.heroSectionItems {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 50%;
+  align-items: flex-start; /* Align items to the left by default */
+}
+.imageContainer{
+  align-items: center;
+}
+
+.mainHeading {
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.mainParagraph {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.resumeButton {
+  background: var(--primaryColor);
+  color: var(--white);
+  outline: none;
+  border: none;
+  max-width: max-content;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 2px;
+}
+
+.heroImage {
+  border-radius: 50%;
+  box-shadow: -4px 12px 2px #edf7f9;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width:380px) {
+  .heroSection{
+    padding: 10px 0px !important;
+  }
+  .heroImage{
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .heroSection {
+    flex-direction: column-reverse; /* Stack items vertically */
+    align-items: center; /* Center items */
+    padding: 50px 0; /* Adjust padding */
+  }
+  .heroSectionItems{
+    align-items: center;
+  }
+  .mainHeading {
+    font-size: 28px; /* Reduce font size for heading */
+    text-align: center;
+  }
+
+  .mainParagraph {
+    font-size: 14px; /* Reduce font size for paragraph */
+  }
+
+  .resumeButton {
+    padding: 8px 20px; /* Adjust padding for the button */
+  }
+
+  .heroImage {
+    width: 200px; /* Adjust image size for mobile */
+    margin: 20px 0; /* Add margin for spacing */
+  }
+}
+
+@media (max-width:970px) {
+  .heroSection{
+    flex-direction: column-reverse;
+  }
+  .heroSectionItems{
+    align-items: center;
+  }
+  .heroSectionItems > h1{
+    text-align: center;
+  }
+  .heroImage{
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Desktop Devices */
+@media (min-width: 901px) {
+  .heroSection {
+    padding: 100px 0; /* Original padding */
+  }
+
+  .mainHeading {
+    font-size: 44px; /* Original font size */
+  }
+
+  .mainParagraph {
+    font-size: 16px; /* Original font size */
+  }
+
+  .resumeButton {
+    padding: 10px 30px; /* Original padding */
+  }
+}
