@@ -3,7 +3,7 @@ import styles from "./FeatureWork.module.css";
 import CardSection from "../CardSection/CardSection";
 const FeatureWork = () => {
   return (
-    <section className={styles.featureWork}>
+    <section className={styles.featureWork} style={{ margin: "40px auto" }}>
       <h2>featured works</h2>
       <CardSection cardData={cardData} />
     </section>
