@@ -1,6 +1,6 @@
 .featureWork {
   width: 75vw;
-  margin: 40 auto; /* Centering the section */
+  margin: 40 auto !important; /* Centering the section */
   padding: 20px; /* Added padding for better spacing */
   background-color: #f9f9f9; /* Light background for contrast */
   border-radius: 10px; /* Rounded corners for a softer look */
