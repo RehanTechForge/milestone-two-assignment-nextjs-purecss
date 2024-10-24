@@ -17,6 +17,7 @@
   grid-column: 1 / 5; /* Desktop default */
   overflow: hidden;
   border-radius: 8px;
+  position: relative; /* Positioning context for the overlay */
   transition: transform 0.3s ease;
 }
 
@@ -29,6 +30,23 @@
 
 .cardColumnOne img:hover {
   transform: scale(1.05); /* Slight zoom on image hover */
+}
+
+/* Gradient overlay for images */
+.cardColumnOne::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(20, 40, 80, 0.3); /* Gradient overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardColumnOne:hover::after {
+  opacity: 1; /* Show overlay on hover */
 }
 
 .cardColumnTwo {

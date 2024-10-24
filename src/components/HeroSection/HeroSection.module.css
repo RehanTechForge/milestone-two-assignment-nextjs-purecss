@@ -1,3 +1,27 @@
+/* Add this to your HeroSection.module.css */
+
+/* Existing Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Hero Section Styles */
 .heroSection {
   display: flex; /* Use Flexbox */
   flex-direction: row; /* Default to row layout */
@@ -6,6 +30,10 @@
   max-width: 75vw;
   justify-content: center; /* Space between content and image */
   align-items: center;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.1)); /* Gradient background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for the whole section */
 }
 
 .heroSectionItems {
@@ -14,20 +42,39 @@
   flex-direction: column;
   justify-content: center;
   flex-basis: 50%;
+  padding: 0px 10px;
   align-items: flex-start; /* Align items to the left by default */
+  animation: fadeInUp 0.5s ease forwards; /* Fade in animation */
 }
-.imageContainer{
+
+.imageContainer {
   align-items: center;
+  animation: scaleUp 0.5s ease forwards; /* Scale up animation */
 }
 
 .mainHeading {
   font-size: 44px;
   font-weight: bold;
+  color: var(--primaryColor); /* Added color for heading */
+  margin-bottom: 10px; /* Add spacing below heading */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Shadow for the heading */
+  transition: color 0.3s ease; /* Transition for color change */
+}
+
+.mainHeading:hover {
+  color: var(--hoverColor); /* Change color on hover */
 }
 
 .mainParagraph {
   font-size: 16px;
   font-weight: 500;
+  color: var(--textColor); /* Added color for paragraph */
+  margin-bottom: 20px; /* Add spacing below paragraph */
+  transition: color 0.3s ease; /* Transition for color change */
+}
+
+.mainParagraph:hover {
+  color: var(--hoverColor); /* Change color on hover */
 }
 
 .resumeButton {
@@ -39,20 +86,34 @@
   cursor: pointer;
   padding: 10px 30px;
   border-radius: 2px;
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transition for background and scale */
+}
+
+.resumeButton:hover {
+  background: var(--hoverColor); /* Change on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.resumeButton:active {
+  transform: scale(0.95); /* Scale down button on click */
 }
 
 .heroImage {
   border-radius: 50%;
-  box-shadow: -4px 12px 2px #edf7f9;
+  box-shadow: -4px 12px 2px rgba(237, 247, 249, 0.5); /* Use rgba for better shadow */
+  transition: transform 0.3s ease; /* Transition for scale effect */
+}
+
+.heroImage:hover {
+  transform: scale(1.1); /* Scale up image on hover */
 }
 
 /* Media Queries for Responsiveness */
-
-@media (max-width:380px) {
-  .heroSection{
+@media (max-width: 380px) {
+  .heroSection {
     padding: 10px 0px !important;
   }
-  .heroImage{
+  .heroImage {
     width: 100% !important;
     height: auto !important;
   }
@@ -65,7 +126,7 @@
     align-items: center; /* Center items */
     padding: 50px 0; /* Adjust padding */
   }
-  .heroSectionItems{
+  .heroSectionItems {
     align-items: center;
   }
   .mainHeading {
@@ -87,17 +148,17 @@
   }
 }
 
-@media (max-width:970px) {
-  .heroSection{
+@media (max-width: 970px) {
+  .heroSection {
     flex-direction: column-reverse;
   }
-  .heroSectionItems{
+  .heroSectionItems {
     align-items: center;
   }
-  .heroSectionItems > h1{
+  .heroSectionItems > h1 {
     text-align: center;
   }
-  .heroImage{
+  .heroImage {
     width: 300px;
     height: 300px;
   }

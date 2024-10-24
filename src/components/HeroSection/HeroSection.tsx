@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className={styles.heroSection}>
       {/* Content above the image for mobile view */}
-      <div className={`${styles.heroSectionItems}`}>
+      <div className={styles.heroSectionItems}>
         <h1 className={styles.mainHeading}>
           Hi, I am Rehan,
           <br /> FullStack Web Developer

@@ -1,6 +1,10 @@
+/* Add this to your RecentPost.module.css */
+
 .recentSection {
   background: #edf7f9;
-  padding: 20px 0;
+  padding: 40px 0; /* Increased padding for more spacing */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
 .recentSectionMain {
@@ -11,13 +15,14 @@
 .recentTopSection {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Center items vertically */
   margin-bottom: 20px;
-  margin-top: 10px;
 }
 
 .recentTopSection > h2 {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 26px; /* Increased font size for better visibility */
+  font-weight: 600; /* Bolder font weight */
+  color: var(--primaryColor); /* Added color for heading */
 }
 
 .underlineLink {
@@ -25,6 +30,11 @@
   color: var(--secondaryColor);
   font-size: 16px;
   font-weight: 500;
+  transition: color 0.3s ease; /* Transition for color change */
+}
+
+.underlineLink:hover {
+  color: var(--hoverColor); /* Change color on hover */
 }
 
 .recentCardSection {
@@ -35,22 +45,31 @@
 
 .recentCardSection > div {
   flex: 1 1 calc(50% - 20px); /* Take up 50% of the width with spacing */
-  padding: 20px 30px;
+  padding: 20px;
   background-color: var(--white);
-  box-sizing: border-box; /* Include padding in width calculations */
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Card shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.recentCardSection > div:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .recentCardSection > div > h2 {
-  font-size: 26px;
+  font-size: 24px; /* Reduced font size for better layout */
   font-weight: bold;
+  color: var(--primaryColor); /* Color for card title */
 }
 
 .recentCardSection > div > .cardDetail > span {
   font-size: 18px;
+  color: var(--secondaryColor); /* Color for card details */
 }
 
 .borderRight {
-  border-right: 1px solid black;
+  border-right: 1px solid var(--lightGray); /* Use a lighter color for the border */
   padding-right: 30px;
 }
 
@@ -75,7 +94,7 @@
   }
 
   .recentTopSection > h2 {
-    font-size: 18px; /* Adjust heading size for mobile */
+    font-size: 20px; /* Adjust heading size for mobile */
   }
 
   .underlineLink {
@@ -88,7 +107,7 @@
   }
 
   .recentCardSection > div > h2 {
-    font-size: 22px; /* Reduce heading size for mobile */
+    font-size: 20px; /* Reduce heading size for mobile */
   }
 
   .recentCardSection > div > .cardDetail > span {
@@ -107,7 +126,7 @@
   }
 
   .recentTopSection > h2 {
-    font-size: 22px; /* Original heading size */
+    font-size: 26px; /* Original heading size */
   }
 
   .underlineLink {

@@ -1,5 +1,27 @@
 import React from "react";
 import styles from "./Blog.module.css";
+
+const BlogCard = ({
+  title,
+  date,
+  categories,
+  description,
+}: {
+  title: string;
+  date: string;
+  categories: string;
+  description: string;
+}) => (
+  <div className={styles.card}>
+    <h2>{title}</h2>
+    <div className={styles.cardDetail}>
+      <span className={styles.borderRight}>{date}</span>
+      <span>{categories}</span>
+    </div>
+    <p>{description}</p>
+  </div>
+);
+
 const BlogPage = () => {
   return (
     <section className={styles.recentSection}>
@@ -9,20 +31,14 @@ const BlogPage = () => {
         </div>
         <div className={styles.recentCardSection}>
           {cardData.map((card, index) => (
-            <div key={index}>
-              <h2>{card.title}</h2>
-              <div className={styles.cardDetail}>
-                <span className={styles.borderRight}>{card.date}</span>
-                <span>{card.categories}</span>
-              </div>
-              <p>{card.description}</p>
-            </div>
+            <BlogCard key={index} {...card} />
           ))}
         </div>
       </div>
     </section>
   );
 };
+
 const cardData = [
   {
     title: "Making a design system from scratch",
